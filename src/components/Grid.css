@@ -1,5 +1,15 @@
+.grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid-column {
+  display: flex:
+  flex-direction: column;
+}
+
 .grid-circle {
-  display: inline-block;
+  display: block;
   width: 52px;
   height: 52px;
   border: 1px solid gray;

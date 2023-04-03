@@ -1,3 +1,4 @@
+import Circle from "./Circle";
 import "./Grid.css";
 
 export default function Board() {
@@ -6,16 +7,15 @@ export default function Board() {
   let circleCount = 0;
 
   return (
-    <>
-      {[...Array(rowCount)].map((e, rowIndex) => (
-        <div key={rowIndex} className="grid-row">
-          {[...Array(columnCount)].map((e, columnIndex) => (
-            <span key={columnIndex} className="grid-circle">
-              {++circleCount}
-            </span>
-          ))}
+    <div className="grid">
+      {[...Array(columnCount)].map((e, i) => (
+        <div key={i} className="grid-column">
+          {[...Array(rowCount)].map((e) => {
+            circleCount++;
+            return <Circle key={circleCount} id={circleCount} />;
+          })}
         </div>
       ))}
-    </>
+    </div>
   );
 }
