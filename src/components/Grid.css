@@ -1,0 +1,6 @@
+.grid-circle {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  border: 1px solid gray;
+}
