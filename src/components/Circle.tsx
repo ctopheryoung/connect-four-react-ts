@@ -1,8 +1,9 @@
+import "./Circle.css";
+
 type CircleProps = {
-  id: number;
-  value?: string;
+  value: string | null;
 };
 
-export default function Circle({ id }: CircleProps) {
-  return <span className="grid-circle">{id}</span>;
+export default function Circle({ value }: CircleProps) {
+  return <span className="grid-circle">{value}</span>;
 }

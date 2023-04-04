@@ -4,13 +4,11 @@
 }
 
 .grid-column {
-  display: flex:
+  display: flex;
   flex-direction: column;
 }
 
-.grid-circle {
-  display: block;
-  width: 52px;
-  height: 52px;
-  border: 1px solid gray;
+.grid-column:hover {
+  cursor: pointer;
+  background-color: red;
 }

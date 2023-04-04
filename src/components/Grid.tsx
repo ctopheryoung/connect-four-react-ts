@@ -1,19 +1,34 @@
+import { useState } from "react";
 import Circle from "./Circle";
 import "./Grid.css";
 
 export default function Board() {
-  const rowCount = 6;
-  const columnCount = 7;
-  let circleCount = 0;
+  const columns = 8;
+  const rows = 6;
+  const [circles, setCircles] = useState(
+    Array.from({ length: columns }, (e) => Array(rows).fill(null))
+  );
+
+  function handleColumnClick(columnIndex: number) {
+    const nextCircles = [...circles];
+    const lastOpenCircleIndex = nextCircles[columnIndex].findLastIndex(
+      (value: string | null) => !value
+    );
+    nextCircles[columnIndex][lastOpenCircleIndex] = "X";
+    setCircles(nextCircles);
+  }
 
   return (
     <div className="grid">
-      {[...Array(columnCount)].map((e, i) => (
-        <div key={i} className="grid-column">
-          {[...Array(rowCount)].map((e) => {
-            circleCount++;
-            return <Circle key={circleCount} id={circleCount} />;
-          })}
+      {circles.map((column, columnIndex) => (
+        <div
+          key={columnIndex}
+          className="grid-column"
+          onClick={() => handleColumnClick(columnIndex)}
+        >
+          {column.map((value: string | null, i: number) => (
+            <Circle key={i} value={value} />
+          ))}
         </div>
       ))}
     </div>
