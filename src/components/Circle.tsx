@@ -5,5 +5,9 @@ type CircleProps = {
 };
 
 export default function Circle({ value }: CircleProps) {
-  return <span className="grid-circle">{value}</span>;
+  return (
+    <div className="grid-slot">
+      {value && <div className={`chip ${value}`} />}
+    </div>
+  );
 }
