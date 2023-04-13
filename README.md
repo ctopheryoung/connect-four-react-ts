@@ -2,10 +2,20 @@
 
 React + TS
 
-### Dev Checklist
+## Dev Checklist
+
+### MVP
 
 - [x] Render game board
 - [x] Place a chip in a column and have it fill the last available space in that column
 - [ ] Alternate turns (Red, Yellow)
 - [ ] Calculate if there is a winner
-- [ ] More?
+- [ ] Clear or Reset Button
+
+### Ideas for additional development
+
+- Allow players to enter names, pick colors
+- Allow different board dimensions
+- Allow different numbers of players
+- Different rules to win
+- Animate the chips falling out when resetting
