@@ -10,5 +10,5 @@
 
 .grid-column:hover {
   cursor: pointer;
-  background-color: red;
+  background-color: rgb(236, 173, 90);
 }
