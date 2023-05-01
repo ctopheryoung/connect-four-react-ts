@@ -1,14 +1,14 @@
-.grid {
+.board {
   display: flex;
   flex-direction: row;
 }
 
-.grid-column {
+.board-column {
   display: flex;
   flex-direction: column;
 }
 
-.grid-column:hover {
+.board-column:hover {
   cursor: pointer;
   background-color: rgb(236, 173, 90);
 }
