@@ -37,8 +37,7 @@ export default function Board() {
 
   return (
     <>
-      <h2>Connect Four</h2>
-      <h4>{status}</h4>
+      <h2>{status}</h2>
       <div className="board">
         {circles.map((column, columnIndex) => (
           <div

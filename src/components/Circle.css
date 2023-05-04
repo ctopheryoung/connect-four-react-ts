@@ -1,15 +1,6 @@
-.slot {
+.circle {
   width: 52px;
   height: 52px;
-  border: 1px solid gray;
-}
-
-.chip {
-  width: 100%;
-  height: 100%;
-  color: blue;
-  border-radius: 50%;
-  background-color: pink;
 }
 
 .red {
